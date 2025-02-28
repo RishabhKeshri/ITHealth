@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Healthcare System - Dashboard</title>
+  <link rel="stylesheet" href="it.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <h1>Dashboard</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="it2.html">Dashboard</a></li>
+      <li><a href="#video" onclick="showTab('video')">Video Consultation</a></li>
+      <li><a href="#monitoring" onclick="showTab('monitoring')">Health Monitoring</a></li>
+      <li><a href="#alerts" onclick="showTab('alerts')">Emergency Alerts</a></li>
+      <li><a href="#records" onclick="showTab('records')">Health Records</a></li>
+      <li><a href="it.html">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Tabs -->
+  <div class="dashboard-container">
+    <div id="video" class="dashboard-tab active">
+      <h2>Video Consultation</h2>
+      <p>Connect with your doctor through secure, real-time video consultation.</p>
+      <button class="btn" onclick="startVideo()">Start Video Consultation</button>
+    </div>
+    <div id="monitoring" class="dashboard-tab">
+      <h2>Health Monitoring</h2>
+      <p>View your real-time health data collected from wearable devices.</p>
+      <button class="btn" onclick="fetchVitals()">View Vitals</button>
+      <div id="vitalsDisplay"></div>
+    </div>
+    <div id="alerts" class="dashboard-tab">
+      <h2>Emergency Alerts</h2>
+      <p>Manage your emergency alerts and notifications.</p>
+      <button class="btn" onclick="sendEmergencyAlert()">Send Emergency Alert</button>
+    </div>
+    <div id="records" class="dashboard-tab">
+      <h2>Health Records</h2>
+      <p>Access and manage your electronic health records securely.</p>
+      <button class="btn" onclick="viewRecords()">View Health Records</button>
+      <div id="recordsDisplay"></div>
+    </div>
+  </div>
+
+  <script src="it.js"></script>
+</body>
+</html>
